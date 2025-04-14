@@ -4,7 +4,7 @@ public class Principal {
     public static void main(String[] args) {
         Movie meuFilme = new Movie();
         meuFilme.setNome("Rio");
-        meuFilme.setAnoDeLancamento(2015);
+        meuFilme.setAnoDeLancamento(2016);
         meuFilme.setDuracaoEmMinutos(180);
 
         meuFilme.exibeFichaTecnica();
