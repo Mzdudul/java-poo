@@ -1,6 +1,6 @@
-package com.screenmacth.model.Movie;
+package com.screenmatch.modelos;
 
-public class Movie {
+public class Titulo {
     private String nome;
     private int anoDeLancamento;
     private boolean incluidoNoPlano;
@@ -18,6 +18,10 @@ public class Movie {
 
     public void setIncluidoNoPlano(boolean incluidoNoPlano) {
         this.incluidoNoPlano = incluidoNoPlano;
+    }
+
+    public int getDuracaoEmMinutos() {
+        return duracaoEmMinutos;
     }
 
     public void setDuracaoEmMinutos(int duracaoEmMinutos) {
@@ -39,6 +43,7 @@ public class Movie {
     public double pegaMedia(){
         return somaDasAvaliacoes / totalDeAvaliacoes;
     }
+
 
 
 }
