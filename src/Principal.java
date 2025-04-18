@@ -1,7 +1,10 @@
+import com.screenmatch.modelos.Episodio;
 import com.screenmatch.modelos.Movie;
 import com.screenmatch.modelos.Serie;
 import com.screenmatch.modelos.calculos.CalculadoraDeTempo;
 import com.screenmatch.modelos.calculos.FiltroRecomendacao;
+
+import java.util.ArrayList;
 
 public class Principal {
     public static void main(String[] args) {
@@ -41,5 +44,29 @@ public class Principal {
 
         FiltroRecomendacao filtro = new FiltroRecomendacao();
         filtro.filtra(meuFilme);
+
+        Episodio episodio = new Episodio();
+        episodio.setNumero(1);
+        episodio.setSerie(lost);
+        episodio.setTotalVisualizacoes(300);
+        filtro.filtra(episodio)
+        ;
+
+        var filmeSeiLa = new Movie();
+        filmeSeiLa.setNome("Ark");
+        filmeSeiLa.setDuracaoEmMinutos(150);
+        filmeSeiLa.setAnoDeLancamento(2000);
+        filmeSeiLa.avaliaFilme(10);
+
+
+        ArrayList <Movie> listaDeFilmes = new ArrayList<>();
+        listaDeFilmes.add(filmeSeiLa);
+        listaDeFilmes.add(meuFilme);
+        listaDeFilmes.add(otherMovie);
+
+        System.out.println("Tamanho da lista " + listaDeFilmes.size());
+        System.out.println("Primeiro filme " + listaDeFilmes.get(0).getNome());
+
+
     }
 }
